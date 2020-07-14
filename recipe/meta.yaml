@@ -1,18 +1,18 @@
 {% set name = "logmuse" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 47f0400802c1ac84c84294f884986569f91c3798134f9be18efa449b178878e7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 251a753e3de5fcde34000677c68b7473232f23c7958de3a33299a1443dd6d2d8
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,12 +26,12 @@ test:
     - logmuse
 
 about:
-  home: "https://github.com/databio/logmuse/"
-  license: "BSD-2-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE.txt"
-  summary: "Logging setup"
+  home: https://github.com/databio/logmuse/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Logging setup
 
 extra:
   recipe-maintainers:
-    - michalstolarczyk
+    - stolarczyk
