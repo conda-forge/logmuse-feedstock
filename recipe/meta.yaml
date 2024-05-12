@@ -1,5 +1,5 @@
 {% set name = "logmuse" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 251a753e3de5fcde34000677c68b7473232f23c7958de3a33299a1443dd6d2d8
+  sha256: a4692c44ddfa912c3cb149ca4c7545f80119aa7485868fd1412e7c647e9a7e7e
 
 build:
   number: 0
