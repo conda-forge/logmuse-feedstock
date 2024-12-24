@@ -7,7 +7,7 @@ Home: https://github.com/databio/logmuse/
 
 Package license: BSD-2-Clause
 
-Summary: Logging setup
+Summary: Logging setup tool
 
 Current build status
 ====================
