@@ -1,0 +1,44 @@
+schema_version: 1
+
+context:
+  name: logmuse
+  version: "0.3.0"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 298c3336cbca049de2f3d6d4bc1ea4ca5d9d6154c748f34cfc86e89d31e3fc9f
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - logmuse
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Logging setup tool
+  license: BSD-2-Clause
+  license_file: LICENSE.txt
+  homepage: https://github.com/databio/logmuse
+
+extra:
+  recipe-maintainers:
+    - stolarczyk
+    - khoroshevskyi
