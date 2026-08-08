@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: logmuse
-  version: "0.3.0"
+  version: "0.3.1"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 298c3336cbca049de2f3d6d4bc1ea4ca5d9d6154c748f34cfc86e89d31e3fc9f
+  sha256: e7035e216bbae03098506e863ab733c42ca3e6a9713444a1d159971da54ae04f
 
 build:
   number: 0
